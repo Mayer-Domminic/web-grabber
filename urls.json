@@ -1,0 +1,32 @@
+{
+    "sources": [
+        {
+            "ID": 0,
+            "TYPE": {
+                "CRYPTO": true,
+                "SNP500": false,
+                "FOREX": false
+            },
+            "LINK": "https://www.coindesk.com/"
+        },
+        {
+            "ID": 1,
+            "TYPE": {
+                "CRYPTO": true,
+                "SNP500": false,
+                "FOREX": false
+            },
+            "LINK": "https://cryptonews.com/"
+        },
+        {
+            "ID": 2,
+            "TYPE": {
+                "CRYPTO": true,
+                "SNP500": false,
+                "FOREX": false
+            },
+            "LINK": "https://www.investopedia.com/cryptocurrency-news-5114163"
+        }
+    ],
+    "updated": "4/10/22"
+}
