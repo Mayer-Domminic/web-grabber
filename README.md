@@ -3,6 +3,9 @@ RUN 'pip install -r requirements.txt' first please!
 
 
 TAKE IN URLS.JSON ->
+
+
+
 LOOP THROUGH RETURNED URLS {
     load url
     fetch <a href>'s
