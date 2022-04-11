@@ -1,3 +1,7 @@
+"
+RUN 'pip install -r requirements.txt' first please!
+
+
 TAKE IN URLS.JSON ->
 LOOP THROUGH RETURNED URLS {
     load url
@@ -9,3 +13,4 @@ LOOP THROUGH RETURNED URLS {
     pull <p> tags from the href urls
     save
 }
+"
