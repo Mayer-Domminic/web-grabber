@@ -1,19 +1,24 @@
+import re
 from bs4 import BeautifulSoup
+import requests
 
-with open("index.html") as fp:
-    soup = BeautifulSoup(fp, 'html.parser')
+i=0
+# gets url html
+html = requests.get("https://www.coindesk.com/").text
 
-soup = BeautifulSoup("<html>a web page</html>", 'html.parser')
+# writing website resuls to output.txt for testing
+with open("output.txt", "w", encoding="utf-8") as f:
+    f.write(html)
+    f.close()
 
-print(BeautifulSoup("<html><head></head><body>Sacr&eacute; bleu!</body></html>", "html.parser"))
-# <html><head></head><body>Sacré bleu!</body></html>
+# sets html to a soup
+soup = BeautifulSoup(html, 'html.parser')
 
-"""
-html = '''<a href="some_url">next</a>
-<span class="class"><a href="another_url">later</a></span>'''
+for link in soup.find_all('a', href=True): 
+    i=i+1
+    print(link['href'])
+ik=0
+for link in soup.find_all('a', attrs={"target"}): 
+    ik=i+1
 
-soup = BeautifulSoup(html)
-
-for a in soup.find_all('a', href=True):
-    print "Found the URL:", a['href']
-"""
+print(i, ik)
